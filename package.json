@@ -1,6 +1,7 @@
 {
     "name": "react-native-responsive-ui",
     "version": "0.0.0-development",
+    "types": "lib/index.d.ts",
     "main": "lib/index.js",
     "description": "Responsive UIs for React Native",
     "author": "William Candillon <wcandillon@gmail.com>",
