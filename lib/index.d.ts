@@ -1,7 +1,12 @@
 import React from "react";
 import { StyleSheet } from "react-native";
+import {MediaQuery as IMediaQuery} from "./MediaQuerySelector";
 interface ResponsiveState {
     window: any;
+}
+
+interface MediaQueryProps extends IMediaQuery {
+    children?: React$Element<*>
 }
 
 export class ResponsiveComponent<P> extends React.Component<
@@ -18,4 +23,4 @@ export interface MediaQueryStyle {
     style: StyleSheet.NamedStyles<any>;
 }
 
-export class MediaQuery extends ResponsiveComponent {}
+export class MediaQuery<MediaQueryProps> extends ResponsiveComponent<MediaQueryProps> {}
