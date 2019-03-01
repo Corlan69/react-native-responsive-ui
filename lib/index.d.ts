@@ -10,6 +10,12 @@ export class ResponsiveComponent<P> extends React.Component<
 > {}
 
 export class ResponsiveStyleSheet {
-    static select(styles: any): any;
+    static select(styles: MediaQueryStyle[]): StyleSheet.NamedStyles<any>;
 }
-// TODO implement others class
+
+export interface MediaQueryStyle {
+    query: MediaQuery;
+    style: StyleSheet.NamedStyles<any>;
+}
+
+export class MediaQuery extends ResponsiveComponent {}
