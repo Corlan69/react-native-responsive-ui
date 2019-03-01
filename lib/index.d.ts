@@ -23,4 +23,4 @@ export interface MediaQueryStyle {
     style: StyleSheet.NamedStyles<any>;
 }
 
-export class MediaQuery<MediaQueryProps> extends ResponsiveComponent<MediaQueryProps> {}
+export class MediaQuery extends ResponsiveComponent<MediaQueryProps> {}
