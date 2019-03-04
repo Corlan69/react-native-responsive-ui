@@ -6,7 +6,7 @@ interface ResponsiveState {
 }
 
 interface MediaQueryProps extends IMediaQuery {
-    children?: React$Element<*>
+    children?: React.ReactElement<any>;
 }
 
 export class ResponsiveComponent<P> extends React.Component<
