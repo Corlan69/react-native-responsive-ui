@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, ViewStyle } from "react-native";
-// import { MediaQuery as IMediaQuery } from "./MediaQuerySelector";
+
 interface ResponsiveState {
     window: any;
 }
@@ -21,19 +21,21 @@ export interface IMediaQuery {
     platform?: string;
 }
 
-interface MediaQueryProps extends IMediaQuery {
+export interface MediaQueryStyle {
+    query: IMediaQuery;
+    style: StyleSheet.NamedStyles<any>;
+}
+
+export interface MediaQueryProps extends IMediaQuery {
     children?: React.ReactElement<any>;
 }
 
-export interface MediaQueryStyle {
-    query: IMediaQuery;
-    style: any;
-}
+declare class ResponsiveComponent<P = {}> extends React.Component<P> {}
 
-export class ResponsiveComponent extends React.Component {}
-
-export class ResponsiveStyleSheet {
+declare class ResponsiveStyleSheet {
     static select(styles: MediaQueryStyle[]): any;
 }
 
-export class MediaQuery<MediaQueryProps> extends ResponsiveComponent {}
+declare class MediaQuery extends ResponsiveComponent<MediaQueryProps> {}
+
+export { ResponsiveComponent, ResponsiveStyleSheet, MediaQuery };
