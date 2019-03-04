@@ -30,7 +30,21 @@ export interface MediaQueryProps extends IMediaQuery {
     children?: React.ReactElement<any>;
 }
 
-declare class ResponsiveComponent<P = {}> extends React.Component<P> {}
+interface Dimensions {
+    width: number;
+    height: number;
+    scale: number;
+    fontScale: number;
+}
+
+interface AllDimensions {
+    window: Dimensions;
+}
+
+declare class ResponsiveComponent<
+    P = {},
+    S = AllDimensions
+> extends React.Component<P, S> {}
 
 declare class ResponsiveStyleSheet {
     static select(styles: MediaQueryStyle[]): any;
