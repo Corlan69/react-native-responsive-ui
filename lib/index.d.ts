@@ -52,4 +52,5 @@ declare class ResponsiveStyleSheet {
 
 declare class MediaQuery extends ResponsiveComponent<MediaQueryProps> {}
 
-export { ResponsiveComponent, ResponsiveStyleSheet, MediaQuery };
+export { ResponsiveComponent, ResponsiveStyleSheet, MediaQuery,
+    AllDimensions as ResponsiveComponentState };
